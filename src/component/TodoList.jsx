@@ -1,12 +1,6 @@
+import {TodoItem} from './todoItem'
 
-import { Todo } from "../entities/Todo"
-import { TodoItem } from "./TodoItem"
-
-type Props = {
-  todos: Todo[]
-}
-
-export const TodoList: React.FC<Props> = ({ todos }) => {
+export const TodoList = ({ todos }) => {
   return (
     <ul className='todo-list'>
       {
