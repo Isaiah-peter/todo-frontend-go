@@ -1,18 +1,14 @@
 import {TodoItem} from './todoItem'
 
-export const TodoList = ({ todos }) => {
+export const TodoList = ({ title, discription, isCompleted }) => {
   return (
     <ul className='todo-list'>
-      {
-        todos.map((todo, i) => {
-          return <li key={i}>
+     <li >
             <TodoItem
-              title={todo.title}
-              discription={todo.discription}
-              isCompleted={todo.isCompleted}
+              title={title}
+              discription={discription}
+              isCompleted={isCompleted}
             /></li>
-        })
-      }
     </ul>
   )
 }

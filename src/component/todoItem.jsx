@@ -1,7 +1,7 @@
 
 
 
-export const TodoItem = ({ title, discription, isCompleted }) => {
+export const TodoItem = ( {title, discription, isCompleted } ) => {
   return (
     <article className='todo-item'>
       <section  className={isCompleted === true ? 'todo-item-text complete' : 'todo-item-text'}>
