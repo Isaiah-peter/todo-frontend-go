@@ -23,7 +23,7 @@ function App() {
 
   const renderTodo = result.map((res)=>{
     return (
-      <TodoList key={Math.random()}  title={res.title} discription= {res.discription} isCompleted = {res.iscomplete} />
+      <TodoList getTodos={getTodos} key={res.Id} id={res.Id} title={res.title} discription= {res.discription} isCompleted = {res.iscomplete} />
     )
   })
   
@@ -32,7 +32,7 @@ function App() {
        <button onClick={()=>document.getElementById("input").style.visibility='visible'} className='page__header--add-todo'>+</button>
       <Header />
       {renderTodo}
-      <InputTodo />
+      <InputTodo getTodos={getTodos}/>
     </div>
   );
 }

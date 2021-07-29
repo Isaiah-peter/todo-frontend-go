@@ -6,9 +6,56 @@
     color: white;
     border-radius: 5px;
     align-items: center;
-
-    
+    position: relative;
 }
+
+.trash{
+    width: 30px;
+    height: 20px;
+    border-right: 1px solid #fff;
+    align-items: center;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+display: none;
+}
+
+label::before {
+   content: '';
+   background: url("../../svg/tick-mark.svg");
+   background-position: center;
+   background-size: contain;
+   width: 1.4rem;
+   height: 1.4rem;
+   position: absolute;
+   right: .24%;
+   top: 38%;
+   
+
+   transform: scale(0) rotateZ(180deg);
+   transition: all 0.5s cubic-bezier(0.54 ,0.1, 0, 1.49);
+}
+
+input[type="checkbox"]:checked + label::before{
+    transform: scale(1) rotateZ(0deg);
+}
+
+label::after{
+    content: "";
+    border: 2px solid green;
+    width: 1.4rem;
+   height: 1.4rem;
+   position: absolute;
+   right: 0%;
+   top: 49%;
+   transform: translate(0, -50%);
+   border-radius: 50%;
+   
+}
+
+
 
 
 

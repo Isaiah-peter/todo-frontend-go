@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-const InputTodo = () => {
+const InputTodo = ({getTodos}) => {
     const [titles, setTitles] = useState('')
     const [discriptions, setDiscriptions] = useState('')
 
@@ -15,17 +15,21 @@ const InputTodo = () => {
             document.getElementById("input").style.visibility = 'hidden'
         }
 
+        const data = {
+            title: titles,
+            discription: discriptions,
+            iscomplete: false
+        }
+
         const res = await axios.post("http://Localhost:9000/todo/",{
-            method: 'post',
-            mode: 'no-cors',
-            data: {
-                title: titles,
-                discription: discriptions,
-                iscomplete: false
-            },
+            method: 'POST',
+            body: JSON.stringify(data)
         })
 
+        console.log(JSON.stringify(data))
+
         console.log(res)
+        getTodos()
 
         setDiscriptions('')
         setTitles('')
