@@ -5,4 +5,59 @@
     background-color: rgb(31, 144, 243);
     color: white;
     padding: 0 2rem;
+    justify-content: space-between;
+
+    &--add-todo{
+        font-size: 4rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        pointer-events: stroke;
+        background-color: rgb(31, 144, 243);
+        color: white;
+        position: absolute;
+        top: 0%;
+        right: 2%;
+    }
+}
+
+.bottom{
+    position: absolute;
+    bottom:  0;
+    padding: 3rem;
+    background-color: white;
+    box-shadow: 0 2rem 4rem rgba(255, 255, 255, 0.3);
+    display: block;
+    visibility: hidden;
+    margin: 1rem;
+}
+
+.bottom .input-text{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.6rem;
+    color: #444;
+
+    &:placeholder-shown{
+        font-size: 1.6rem;
+        color: #444;
+    }
+
+    &:not(:last-child){
+        margin-bottom: 2rem;
+    }
+}
+.relative{
+    position: relative;
+}
+
+.todo-submit-btn{
+    padding: .5rem 2rem;
+    color: white;
+    background-color: #0c68fa;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    cursor: pointer;
 }
